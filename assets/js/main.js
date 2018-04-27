@@ -2,17 +2,34 @@ const source = "https://raw.githubusercontent.com/pandas-dev/pandas/master/panda
 let step = 772
 let fim = 0
 let fonte = ""
-const bspkeycode = 8;
+const bspkeycode = 8
+let $source, $blink
 
 const draw = () => {
-    $('#source').html(
-        PR.prettyPrintOne(
-            fonte.substring(step, step+fim)
-        )
+    let text = fonte.substring(step, step+fim) 
+
+    $source.html(
+        PR.prettyPrintOne(text)
     )
 }
 
+const addCursor = () => {
+    $blink.show()
+}
+
+const removeCursor = () => {
+    $blink.hide()
+}
+
+const blink = () => {
+    addCursor()
+    window.setTimeout(removeCursor, 500)
+}
+
 $(document).ready(() => {
+    window.setInterval(blink, 1000)
+    $source = $('#source')
+    $blink = $('#blink')
     $(document).on('keydown', (e) => {
         let carrier = Math.round(Math.random()*10%4)+1
         if (e.keyCode === bspkeycode)
