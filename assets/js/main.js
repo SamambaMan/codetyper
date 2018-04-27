@@ -1,4 +1,4 @@
-const source = "https://raw.githubusercontent.com/turicas/rows/develop/rows/plugins/xlsx.py"
+const source = "https://raw.githubusercontent.com/pandas-dev/pandas/master/pandas/core/common.py"
 let step = 772
 let fim = 0
 let fonte = ""
@@ -29,6 +29,6 @@ $(document).ready(() => {
 
     $.get(source, function (data) {
         fonte = data
-        step = fonte.indexOf("from __future__")
+        step = fonte.indexOf("def is_bool_indexer")
     })
 });
