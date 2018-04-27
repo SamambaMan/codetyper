@@ -1,0 +1,12 @@
+body {
+    background: #000000;
+    margin: 0;
+    overflow: hidden;
+}
+
+pre.prettyprint {
+    padding: 2px !important;
+    border: none !important;
+    height: 100vh;
+    margin: 0 !important;
+}
