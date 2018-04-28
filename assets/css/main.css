@@ -17,8 +17,8 @@ pre.prettyprint {
     border: none;
     position: absolute;
     left: 0px;
-    bottom:0px;
-    width:30px;
+    top: 0px;
+    width: 30px;
     overflow: none;
     opacity: 0;
 }
