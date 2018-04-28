@@ -26,23 +26,31 @@ const blink = () => {
     window.setTimeout(removeCursor, 500)
 }
 
+const press = e => {
+    let carrier = Math.round(Math.random()*10%3)+1
+    if (e && e.keyCode === bspkeycode)
+        fim -= carrier
+    else 
+        fim += carrier
+    
+    if (fim < 0)
+        fim = 0
+
+    draw()
+    window.scrollTo(0, document.body.scrollHeight)
+}
+
 $(document).ready(() => {
     window.setInterval(blink, 1000)
     $source = $('#source')
     $blink = $('#blink')
-    $(document).on('keydown', (e) => {
-        let carrier = Math.round(Math.random()*10%4)+1
-        if (e.keyCode === bspkeycode)
-            fim -= carrier
-        else 
-            fim += carrier
-        
-        if (fim < 0)
-            fim = 0
-
-        draw()
-        window.scrollTo(0, document.body.scrollHeight)
-    });
+    $('#texto').focus()
+    $(document).on('keydown', press)
+    $('#texto').on('keydown', press)
+    $(document).on('click', () => {
+        $('#texto').focus()
+        press()
+    })
 
     $.get(source, function (data) {
         fonte = data

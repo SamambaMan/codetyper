@@ -10,3 +10,14 @@ pre.prettyprint {
     height: 100vh;
     margin: 0 !important;
 }
+
+#texto {
+    background: #000000;
+    border: none;
+    color: #000000;
+    position: absolute;
+    right: 100px;
+    top:0px;
+    width:30px;
+    overflow: none;
+}
