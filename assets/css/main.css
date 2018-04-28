@@ -12,12 +12,13 @@ pre.prettyprint {
 }
 
 #texto {
-    background: #000000;
+    /*background: #000000;
+    color: #000000;*/
     border: none;
-    color: #000000;
     position: absolute;
-    right: 100px;
-    top:0px;
+    left: 0px;
+    bottom:0px;
     width:30px;
     overflow: none;
+    opacity: 0;
 }

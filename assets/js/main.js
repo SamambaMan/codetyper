@@ -40,6 +40,10 @@ const press = e => {
     window.scrollTo(0, document.body.scrollHeight)
 }
 
+const isMobileDevice = () => {
+    return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+};
+
 $(document).ready(() => {
     window.setInterval(blink, 1000)
     $source = $('#source')
@@ -51,6 +55,10 @@ $(document).ready(() => {
         $('#texto').focus()
         press()
     })
+
+    if (!isMobileDevice()) 
+        $('#texto').hide()
+    
 
     $.get(source, function (data) {
         fonte = data
