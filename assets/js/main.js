@@ -1,5 +1,5 @@
 const source = "https://raw.githubusercontent.com/pandas-dev/pandas/master/pandas/core/common.py"
-let step = 772
+let step = 228
 let fim = 0
 let fonte = ""
 const bspkeycode = 8
