@@ -62,6 +62,6 @@ $(document).ready(() => {
 
     $.get(source, function (data) {
         fonte = data
-        step = fonte.indexOf("def is_bool_indexer")
+        step = fonte.indexOf("def asarray_tuplesafe")
     })
 });
